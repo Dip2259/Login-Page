@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    background-color: aqua;
+    width:23vw;
+    height: 30vh;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+}
+.container h2{
+    font-family: 'Poppins', cursive;
+    font-size: 2.0rem;
+}
+.container h2 span{
+    font-family: 'Clicker Script', cursive;
+}
+.feilds{
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.feilds label{
+    font-family: 'Poppins', cursive, sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+}
+.feilds div{
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    align-items: center;
+}
+.feilds div img{
+    position: absolute;
+    width: 15px;
+    right: 12px;
+    display: none;
+}
+#passError,#emailError{
+    animation: vibrate 0.3s 1 linear;
+}
+.feilds input{
+    width: 70%;
+    height: 5vh;
+    position: relative;
+    margin-left: 10px;
+    padding-left:10px;
+    padding-right: 24px;
+    /* border: none; */
+    border-radius: 5px;
+    outline: none;
+    overflow: scroll;
+}
+.feilds input:focus{
+    border: 2px solid rgba(39, 110, 192, 0.708);
+}
+
+#submit{
+    font-family: "Poppins", sans-serif, cursive;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 3.5px 0;
+    padding: 0 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    height: 5vh;
+}
+.correct{
+    border: 2px solid rgba(4, 153, 4, 0.694);
+}
+.wrong{
+    animation: vibrate 0.3s 1 linear;
+    border: 2px solid red;
+}
+@keyframes vibrate {
+    0%{transform: translateX(-5px);}
+    25%{transform: translateX(5px);}
+    50%{transform: translateX(-5px);}
+    75%{transform: translateX(5px);}
+    100%{transform: translateX(0px);}
+}
